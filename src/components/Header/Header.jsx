@@ -9,7 +9,7 @@ const Header = () => {
         <header className={'header'}>
             <Flex>
                 <Logo />
-                <p className={'header__title'}>ГК «Страна Девеломпент»</p>
+                <p className={'header__title'}>ГК «Страна Девелопмент»</p>
             </Flex>
             <Button onClick={() => {
                 localStorage.removeItem('token');
