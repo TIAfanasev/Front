@@ -11,7 +11,7 @@ const CardComponent = ({card, setIsSelected, isSelected}) => {
     const userId = Number(localStorage.getItem('userId'));
     const isCardSelected = card.buildings_used?.includes(userId);
     const handleCardClick = () => {
-        // if (isCardSelected) return;
+        if (isCardSelected) return;
         api.createApplication(localStorage.getItem('token'), {building: card.id})
             .then(() => {
                 setIsSelected(!isSelected)
